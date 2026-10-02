@@ -1,3 +1,5 @@
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 import "./globals.css";
 
 export const metadata = {
@@ -8,7 +10,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={` h-full antialiased`}>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full grid grid-rows-[auto_1fr_auto]">
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }
