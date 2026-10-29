@@ -1,0 +1,23 @@
+#### Component Boundaries
+
+- RootLayout, runs on server, static
+- Home, runs on server, no client-side interactivity yet.
+- Header, runs on server, no interactivity of its own.
+- CartBadge, runs on client, holds state.
+- Footer, runs on server, no interactivity of its own.
+- Providers, runs on client, state provider wrapper.
+- CartProvider, runs on client, state provider.
+- Cart, runs on client, would hold state.
+- BackToHome, runs on client, has event handling code.
+- Checkout, runs on server, is async.
+- Login, runs on server, no client-side interactivity yet.
+- Register, runs on server, no client-side interactivity yet.
+- Menu, runs on server, async function.
+- SideBar, runs on server, not interactive.
+- FilterShell, runs on client, client wrapper shell.
+- DishList, runs on server, not interactive.
+- Dish, runs on server, not interactive.
+- Counter, runs on client, holds state.
+- CategoryBar, runs on client, interactive.
+- CardButtons, runs on client, interactive.
+- DishDetail, runs on server, async function.

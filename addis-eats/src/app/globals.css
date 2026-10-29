@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-playfair-display: var(--font-playfair-display), Georgia;
+}

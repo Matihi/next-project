@@ -1,0 +1,100 @@
+.registerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 3rem;
+  background-color: #faf4f1;
+}
+
+.formWrapper {
+  background-color: rgb(253, 227, 223);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  min-width: 18rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 0.15);
+}
+
+.formWrapper h1 {
+  align-self: center;
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 1rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.errorMessage {
+  padding: 0.1rem;
+  width: fit-content;
+  color: red;
+  font-size: 0.7rem;
+}
+
+.form > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.nameWrapper > label,
+.phoneWrapper > label,
+.passwordWrapper > label {
+  padding-block: 0.3rem;
+}
+
+.form > div > input {
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  background-color: white;
+}
+
+.form > div > .invalid {
+  border: 1px solid red;
+}
+
+.invalid:focus {
+  outline: 1px solid red;
+}
+
+.form > button {
+  align-self: flex-start;
+  padding: 0.5rem;
+  border: none;
+  background-color: #7a1401;
+  color: white;
+  border-radius: 0.5rem;
+}
+
+.form > .disabledRegister {
+  background-color: #4a332f;
+}
+
+@media (max-width: 48rem) {
+  .formWrapper h1 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 31.25rem) {
+  .form > div > input,
+  .form > div > label {
+    font-size: 0.8rem;
+  }
+
+  .form > button {
+    font-size: 0.8rem;
+  }
+
+  .errorMessage {
+    font-size: 0.7rem;
+  }
+}
