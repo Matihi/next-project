@@ -46,63 +46,7 @@ const mockDishes = [
 ];
 
 if (!global.mockOrders) {
-  global.mockOrders = [
-    {
-      id: "ord_620",
-      name: "Abeje",
-      phone: "+251911002299",
-      quantity: 2,
-      area: "bole",
-      totalPrice: 1270,
-      status: "PENDING",
-      userId: "34786aed-686c-4165-8ddf-53c863e827ba",
-      createdAt: "2026-10-30T01:05:28.906Z",
-    },
-    {
-      id: "ord_226",
-      name: "Abeje",
-      phone: "+251911002299",
-      quantity: 2,
-      area: "bole",
-      totalPrice: 1230,
-      status: "PENDING",
-      userId: "34786aed-686c-4165-8ddf-53c863e827ba",
-      createdAt: "2026-10-30T01:07:01.268Z",
-    },
-    {
-      id: "ord_122",
-      name: "Abeje",
-      phone: "+251911002299",
-      quantity: 3,
-      area: "piassa",
-      totalPrice: 1620,
-      status: "PENDING",
-      userId: "34786aed-686c-4165-8ddf-53c863e827ba",
-      createdAt: "2026-10-30T01:08:09.242Z",
-    },
-    {
-      id: "ord_110",
-      name: "Lemlem",
-      phone: "+251988776655",
-      quantity: 4,
-      area: "kazanchis",
-      totalPrice: 2470,
-      status: "PENDING",
-      userId: "f68b54e4-1563-4126-a7fc-126affd2bf14",
-      createdAt: "2026-10-30T01:08:49.833Z",
-    },
-    {
-      id: "ord_784",
-      name: "Lemlem",
-      phone: "+251988776655",
-      quantity: 2,
-      area: "legehar",
-      totalPrice: 3690,
-      status: "PENDING",
-      userId: "f68b54e4-1563-4126-a7fc-126affd2bf14",
-      createdAt: "2026-10-30T01:09:35.734Z",
-    },
-  ];
+  global.mockOrders = [];
 }
 
 // In-memory orders store
