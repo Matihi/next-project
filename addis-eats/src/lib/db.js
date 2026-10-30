@@ -4,6 +4,7 @@
  */
 
 // Mock dish records
+import { dateCount } from "@/services/date";
 const mockDishes = [
   {
     id: "dish_1",
@@ -45,20 +46,117 @@ const mockDishes = [
 ];
 
 if (!global.mockOrders) {
-  global.mockOrders = [];
+  global.mockOrders = [
+    {
+      id: "ord_620",
+      name: "Abeje",
+      phone: "+251911002299",
+      quantity: 2,
+      area: "bole",
+      totalPrice: 1270,
+      status: "PENDING",
+      userId: "34786aed-686c-4165-8ddf-53c863e827ba",
+      createdAt: "2026-10-30T01:05:28.906Z",
+    },
+    {
+      id: "ord_226",
+      name: "Abeje",
+      phone: "+251911002299",
+      quantity: 2,
+      area: "bole",
+      totalPrice: 1230,
+      status: "PENDING",
+      userId: "34786aed-686c-4165-8ddf-53c863e827ba",
+      createdAt: "2026-10-30T01:07:01.268Z",
+    },
+    {
+      id: "ord_122",
+      name: "Abeje",
+      phone: "+251911002299",
+      quantity: 3,
+      area: "piassa",
+      totalPrice: 1620,
+      status: "PENDING",
+      userId: "34786aed-686c-4165-8ddf-53c863e827ba",
+      createdAt: "2026-10-30T01:08:09.242Z",
+    },
+    {
+      id: "ord_110",
+      name: "Lemlem",
+      phone: "+251988776655",
+      quantity: 4,
+      area: "kazanchis",
+      totalPrice: 2470,
+      status: "PENDING",
+      userId: "f68b54e4-1563-4126-a7fc-126affd2bf14",
+      createdAt: "2026-10-30T01:08:49.833Z",
+    },
+    {
+      id: "ord_784",
+      name: "Lemlem",
+      phone: "+251988776655",
+      quantity: 2,
+      area: "legehar",
+      totalPrice: 3690,
+      status: "PENDING",
+      userId: "f68b54e4-1563-4126-a7fc-126affd2bf14",
+      createdAt: "2026-10-30T01:09:35.734Z",
+    },
+  ];
 }
 
 // In-memory orders store
 export const mockOrders = global.mockOrders;
 
 if (!global.users) {
-  global.users = [];
+  global.users = [
+    {
+      id: "34786aed-686c-4165-8ddf-53c863e827ba",
+      name: "Abeje",
+      phone: "+251911002299",
+      password: "$2b$10$9fa6oyVbTjFVBB/9iWmPXevqmsq4jJ4V/so7LBv0HY8lONQaNxet.",
+      role: "customer",
+      createdAt: new Date("2026-10-30T00:47:45.900Z"),
+    },
+    {
+      id: "4cf7a8c6-56a5-48c2-bf05-c552fa871588",
+      name: "Abebe",
+      phone: "+251911223344",
+      password: "$2b$10$TnPux459Eou0ag/.cHy0EeO/Of0Yq9ZKWYaZ9BaGgR/qpzDr4VXpq",
+      role: "admin",
+      createdAt: new Date("2026-10-30T00:50:21.699Z"),
+    },
+    {
+      id: "f68b54e4-1563-4126-a7fc-126affd2bf14",
+      name: "Lemlem",
+      phone: "+251988776655",
+      password: "$2b$10$BsT0uxYEclki/cYqJmdSdO.GVQEDW8LqYy5IGnv8c80nKrEh6.qTS",
+      role: "customer",
+      createdAt: new Date("2026-10-30T00:52:55.049Z"),
+    },
+  ];
 }
 
 export const users = global.users;
 
 if (!global.sessionArray) {
-  global.sessionArray = [];
+  global.sessionArray = [
+    {
+      sessionId: "87272b7b-7a27-4608-b585-20203e84c371",
+      userId: "34786aed-686c-4165-8ddf-53c863e827ba",
+      expiresAt: new Date(Date.now() + 24 * 60 * 60 * 1000),
+    },
+    {
+      sessionId: "fb8b1bc8-7b2b-4bf4-b051-0133474feb9e",
+      userId: "4cf7a8c6-56a5-48c2-bf05-c552fa871588",
+      expiresAt: new Date(Date.now() + 24 * 60 * 60 * 1000),
+    },
+    {
+      sessionId: "0d20dcb1-68f2-4570-b90b-364617adb8a4",
+      userId: "f68b54e4-1563-4126-a7fc-126affd2bf14",
+      expiresAt: new Date(Date.now() + 24 * 60 * 60 * 1000),
+    },
+  ];
 }
 
 export const sessionArray = global.sessionArray;
@@ -118,6 +216,7 @@ export async function createOrder(data, userId) {
   };
 
   mockOrders.push(newOrder);
+  console.log(mockOrders);
   return newOrder;
 }
 
