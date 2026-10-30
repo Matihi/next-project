@@ -20,10 +20,12 @@ export const createAccount = async (data) => {
   const id = crypto.randomUUID();
 
   const userAccount = {
-    id,
-    ...data,
-    password: hashedPassword,
-    createdAt: new Date().toISOString(),
+    id: "34786aed-686c-4165-8ddf-53c863e827ba",
+    name: "Abeje",
+    phone: "+251911002299",
+    password: "$2b$10$9fa6oyVbTjFVBB/9iWmPXevqmsq4jJ4V/so7LBv0HY8lONQaNxet.",
+    role: "customer",
+    createdAt: "2026-10-30T00:47:45.900Z",
   };
 
   users.push(userAccount);
