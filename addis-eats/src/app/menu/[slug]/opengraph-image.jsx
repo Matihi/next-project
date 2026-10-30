@@ -15,7 +15,7 @@ export default async function Image({ params }) {
   }
 
   return new ImageResponse(
-    <div style={{ fontSize: 72, background: "#0A1F3D" }}>
+    <div style={{ fontSize: 72, background: "black" }}>
       {dish.nameEn} — {dish.priceETB}
     </div>,
   );
