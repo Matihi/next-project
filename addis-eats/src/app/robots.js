@@ -12,6 +12,6 @@ export default function robots() {
         "/register",
       ],
     },
-    sitemap: "http://localhost:3000/sitemap.xml",
+    sitemap: "https://next-project-59ed.vercel.app/sitemap.xml",
   };
 }

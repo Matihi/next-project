@@ -5,10 +5,10 @@ const url = "https://addis-eats-backend.onrender.com/menu/";
 export default async function sitemap() {
   const dishes = await getDishes(url);
   return [
-    { url: "http://localhost:3000/", priority: 1 },
-    { url: "http://localhost:3000/menu", priority: 0.8 },
+    { url: "https://next-project-59ed.vercel.app/", priority: 1 },
+    { url: "https://next-project-59ed.vercel.app/menu", priority: 0.8 },
     ...dishes.map((dish) => ({
-      url: `http://localhost:3000/menu/${dish.slug}`,
+      url: `https://next-project-59ed.vercel.app/menu/${dish.slug}`,
     })),
   ];
 }

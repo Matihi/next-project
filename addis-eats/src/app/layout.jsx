@@ -11,7 +11,7 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://localhost:3000"),
+  metadataBase: new URL("https://next-project-59ed.vercel.app"),
   title: {
     template: "%s · Addis Eats",
     default: "Addis Eats — food delivery in Addis Ababa",
